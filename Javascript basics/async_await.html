@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async/await</title>
+</head>
+<body>
+    <div class="demo"></div>
+</body>
+    <script>
+        let output=document.getElementsByClassName('demo')[0];
+        async function solvePromise(){
+            const promise=new Promise((resolve,reject)=>{
+                reject("the promise is rejected")
+            })
+            try{
+                const result=await promise;
+                output.innerHTML+=result
+            }
+            catch(err){
+                output.innerHTML+=err
+            }
+        }
+        solvePromise()
+    </script>
+</html>

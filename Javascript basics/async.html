@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setTimeout Example</title>
+</head>
+<body>
+    <div class="demo"></div>
+
+    <script>
+        let output = document.getElementsByClassName('demo')[0];
+
+        output.innerHTML += "program started";
+
+        setTimeout(function () {
+            output.innerHTML += "<br>setTimeout called()";
+        }, 1000);
+
+        output.innerHTML += "<br>program ends";
+    </script>
+</body>
+</html>

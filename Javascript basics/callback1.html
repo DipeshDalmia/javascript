@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calllback Example</title>
+</head>
+<body>
+    <div class="demo"></div>
+
+    <script>
+        let output = document.getElementsByClassName('demo')[0];
+
+
+        function mathoperation(a,b,callback){
+            let result=callback(a,b);
+            output.innerHTML+="<br>result is:"+result
+        }
+        mathoperation(10,20,(a,b)=>{
+            return a+b
+        })
+        mathoperation(30,20,(a,b)=>{
+            return a-b
+        })
+
+    </script>
+</body>
+</html>

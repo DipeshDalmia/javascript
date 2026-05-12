@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-get request</title>
+</head>
+<body>
+    <div id = "output"> </div>
+</body>
+<script>
+      let output = document.getElementById("output");
+      let options = {
+         method: 'GET',
+      }
+      let URL = "https://dummy.restapiexample.com/api/v1/employee/2";
+      fetch(URL, options)
+         .then(res => res.json())
+         .then(res => {
+            output.innerHTML += "The status of the response is - " + res.status + "<br>";
+            output.innerHTML += "The message returned from the API is - " + res.message + "<br>";
+            output.innerHTML += "The data returned from the API is - " + JSON.stringify(res.data);
+         })
+         .catch(err => {
+            output.innerHTML += "The error returned from the API is - " + JSON.stringify(err);
+         })
+   </script>
+</html>
