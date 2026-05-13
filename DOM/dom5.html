@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML DOM Attribute name Property</title>
+    <style>
+        .my_exe{
+            width: 95%;
+            padding: 10px;
+            margin: 5px auto;
+            background-color: rgb(197, 245, 221);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-family: sans-serif;
+        }
+        .my_exe h3, .my_exe p, .my_exe img{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .my_exe img{
+            border: 1px solid green;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .my_exe input{
+            display: block;
+            width: 350px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            display: flex;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="my_exe">
+        <h3>HTML DOM Attribute name Property</h3>
+        <p>Click on the below image to get it's attribute</p>
+        <img id="demo" src="https://www.tutorialspoint.com/images/logo.png" alt="demo image" onclick="printAttribute()"/>
+        <input type="text" id="attribute-box" placeholder="Attribute of img tag..." readonly/>
+    </div>
+
+    <script>
+        function printAttribute() {
+            const element = document.getElementById("demo");
+            let aName = element.attributes[0].name;
+            document.getElementById("attribute-box").value = aName;
+        }
+    </script>
+</body>
+
+</html>

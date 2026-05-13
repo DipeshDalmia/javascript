@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <form id="form1" onsubmit="submitForm(event)">
+        <label for="first">first name</label>
+        <input type="text" name="first" id="first">
+        <label for="second">Last name</label>
+        <input type="text" name="second" id="second">
+        <button type="submit">submit</button>
+    </form>
+    
+    <div id = "output"> </div>
+</body>
+<script>
+    function submitForm(e){
+        e.preventDefault();
+        const output= document.getElementById("output")
+        const firstname=document.forms[0]['first'].value;
+        const lastname=document.forms[0]['second'].value;
+        output.innerHTML="first name:"+firstname+" lastname:"+lastname
+    }
+</script>
+</html>

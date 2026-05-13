@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    #parent {
+      width: 700px;
+      height: 200px;
+      background: green;
+    }
+  </style>
+<body>
+    <div id = "parent">
+    </div>
+    <br>
+    <button onclick = "startAnimation()"> Animate Div </button>
+</body>
+<script>
+    function startAnimation() {
+      const parent = document.getElementById("parent");
+      let opacity = 1;
+      let id = setInterval(animationFrame, 50);
+      function animationFrame() {
+        if (opacity <= 0) {
+          
+          clearInterval(id);
+          parent.style.opacity = 1;
+          parent.style.backgroundColor = "red";
+        } else {
+          
+          parent.style.opacity = opacity;
+          opacity = opacity - 0.1;
+        }
+      }
+    }
+  </script>
+</html>

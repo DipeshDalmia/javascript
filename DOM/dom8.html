@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+   <div id = "text">Hello World!</div>
+   <button onclick = "changeHTML()"> Change HTML </button>
+   <script>
+      function changeHTML() {
+         const text = document.getElementById('text');
+         const textNode = document.createElement('p');
+         textNode.innerHTML = "Welcome";
+         text.replaceWith(textNode);
+      }
+   </script>
+
+</body>
+</html>

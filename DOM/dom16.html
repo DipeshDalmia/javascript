@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+        button{
+            padding: 8px 20px;
+            margin: 20px 0px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <p>Click the button below to add style to all "div" elements.</p>
+   <div>Div 1</div>
+   <div>Div 2</div>
+   <div>Div 3</div>
+   <div>Div 4</div>
+   <div>Div 5</div>
+   <button id="btn">Add style</button>
+</body>
+    <script>
+   document.getElementById('btn').addEventListener("click", ()=>{
+      let myNodeList = document.getElementsByTagName('div');
+      
+      for(let i = 0; i<myNodeList.length; i++){
+          myNodeList[i].style.color = 'white';
+          myNodeList[i].style.padding = "10px";
+          myNodeList[i].style.margin = "5px";
+          myNodeList[i].style.border = "1px solid black";
+          myNodeList[i].style.backgroundColor = "green";
+      }
+   });
+    </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button onclick="func()">Write output</button>
+    <button onclick="func1()">Add HTML</button>
+    <p id="output"></p>
+</body>
+<script>
+    function func(){
+        document.getElementById('output').innerHTML="hello user"
+    }
+    function func1(){
+        document.write("<p>Hello user I am Dipesh Dalmia</p>")
+    }
+    document.addEventListener('mouseover',()=>{
+        document.body.style.backgroundColor='red'
+    })
+</script>
+</html>

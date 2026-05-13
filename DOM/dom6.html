@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <form id="form1">
+        <label for="first">first name</label>
+        <input type="text" name="first" id="first">
+    </form>
+    <form id="form2">
+        <label for="second">last name</label>
+        <input type="text" name="second" id="second">
+    </form>
+    <div id = "output">The innerHTML of the form element having id equal to form2 is: </div>
+</body>
+<script>
+    const output=document.getElementById('output')
+    output.innerHTML+=document.forms.namedItem('form2').innerHTML
+    output.innerHTML+="<br> total number of forms in html document:"+document.forms.length
+    output.innerHTML+="<br>Id of the second form is:"+document.forms[1].id
+</script>
+</html>

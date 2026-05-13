@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+   <div id = "fruits">
+      <p> Banana </p>
+      <p> Watermelon </p>
+   </div>
+   <button onclick = "AddFruit()"> Add Apple </button>
+   <button onclick = "removeFruit()"> Remove Apple </button>
+   <button onclick="replaceContent()"> Replace content </button>
+
+   <script>
+      function AddFruit() {
+         const fruits = document.getElementById("fruits");
+         const p = document.createElement("p");
+         p.innerHTML = "Apple";
+         fruits.appendChild(p); 
+      }
+      function removeFruit() {
+        const fruits = document.getElementById("fruits");
+        const apple = fruits.children[2];
+        fruits.removeChild(apple);
+      }
+      function replaceContent() {
+         document.write("Hello World");
+      }
+   </script>
+</body>
+</html>

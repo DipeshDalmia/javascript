@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+
+    <button onclick="replacetext()">change text</button>
+
+    <script>
+        function replacetext() {
+            const textp = document.getElementsByTagName('p');
+
+            textp[1].textContent = "Hello world";
+        }
+    </script>
+</body>
+</html>
