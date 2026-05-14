@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click on the image to get its attribute</p>
+    <img id="demo" onclick="printAttribute()" src="https://www.tutorialspoint.com/images/logo.png" alt="img">
+    <div id="result"></div>
+</body>
+<script>
+    function printAttribute(){
+        let ans=document.getElementById('demo');
+        let attributenme=ans.attributes[1].name;
+        document.getElementById('result').innerHTML=attributenme
+    }
+</script>
+</html>

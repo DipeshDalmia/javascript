@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>press any key</h3>
+</body>
+<script>
+    // document.addEventListener('keydown',(event)=>{
+    //     document.getElementsByTagName('h3')[0].innerHTML+="<br>key pressed:"+event.key
+    // })// it involves all key including alt,cntrl,shift
+    // document.addEventListener('keypress',(event)=>{
+    //     document.getElementsByTagName('h3')[0].innerHTML+="<br>character pressed:"+event.key                                                                                                                                                                                                                                          
+    // })//it doesnt include alt,contrl,shift
+    document.addEventListener('keyup',(event)=>{
+        document.getElementsByTagName('h3')[0].innerHTML+="<br>key released:"+event.key                                                                                                                                                                                                                                          
+    })//it prints the released key which was pressed,it includes cntrl,shift etc
+</script>
+</html>

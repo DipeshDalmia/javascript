@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    label for="search">Search:</label>
+   <input type="text" id="search" oninput="handleInput()">
+   <div id="message" style=" margin-top: 10px; font-weight: lighter;border: 1px solid #ddd;padding: 10px; background-color: #f9f9f9; border-radius: 5px; font-family: 'Arial', sans-serif; font-size: 14px; color: #333; width: 30%;"></div>
+</body>
+<script>
+      var messageElement = document.getElementById('message');
+      function handleInput() {
+         // Perform actions as the user types
+         var searchInput = document.getElementById('search').value;
+         messageElement.innerHTML+="Search input: " + searchInput+'<br>';
+      }
+   </script>
+</html>

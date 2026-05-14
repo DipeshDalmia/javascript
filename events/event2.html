@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func()">click</button>
+    <div ondblclick="func1()">Hello dipesh</div>
+    <p>pres any key to change the color of input field</p>
+    <input type="text" onkeydown="func3()">
+</body>
+<script>
+    function func(){
+        alert('button clicked')
+    }
+    function func1(){
+        document.getElementsByTagName('div')[0].style.backgroundColor="red"
+    }
+    function func3(){
+        document.getElementsByTagName('input')[0].style.backgroundColor="yellow"
+        document.getElementsByTagName('input')[0].style.color="red"
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<style>
+      #test {
+         font-size: 15px;
+      }
+   </style>
+<body>
+    <h2>hover above the text to change the color</h2>
+    <div id="test" onmouseenter="changeFont(); changeColor()">Hello world</div>
+</body>
+<script>
+    function changeColor(){
+        document.getElementById('test').style.color="red"
+    }
+    function changeFont(){
+        document.getElementById('test').style.fontSize="25px"
+    }
+</script>
+</html>

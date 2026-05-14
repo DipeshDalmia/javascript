@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <button type="submit">Submit</button>
+   </form>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+         alert('DOM content has been fully loaded!');
+      });
+      document.addEventListener('click', function(event) {
+         alert('Element clicked! Tag Name: ' + event.target.tagName);
+      });
+      document.addEventListener('submit', function() {
+         alert('Form submitted!');
+      });
+
+      document.addEventListener('keydown', function(event) {
+         alert('Key pressed: ' + event.key);
+      });
+</script>
+</html>

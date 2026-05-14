@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>mouse down and up event and move on this line to trigger mouse move event<br>
+    bring the cursor inside this div and rotate the wheel of mouse</div>
+    <p></p>
+</body>
+<script>
+    let mydiv=document.getElementsByTagName('div')[0]
+    let output=document.getElementsByTagName('p')[0]
+    mydiv.addEventListener('mousedown',(event)=>{
+        output.innerHTML+="<br> mouse down"+ JSON.stringify(event)
+    })
+    mydiv.addEventListener('mouseup',(event)=>{
+        output.innerHTML+="<br> mouse up"+ JSON.stringify(event)
+    })
+    mydiv.addEventListener('mousemove',(event)=>{
+        const x=event.clientX;
+        const y=event.clientY;
+        output.innerHTML+="<br>"+`mouse moved to ${x} , ${y}`
+    })
+    mydiv.addEventListener('wheel',()=>{
+        output.innerHTML+="<br> mouse wheel rotated"
+    })
+
+</script>
+</html>

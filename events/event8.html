@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="country">Selet a country</label>
+    <select onchange="handleChange()" name="country" id="country">
+        <option value="usa">usa</option>
+         <option value="canada">canada</option>
+          <option value="uk">uk</option>
+           <option value="India">India</option>
+    </select>
+    <p id="text"></p>
+</body>
+<script>
+    function handleChange(){
+        var selectedCountry=document.getElementById('country').value
+        document.getElementById('text').innerHTML="selected country:"+selectedCountry
+    }
+</script>
+</html>

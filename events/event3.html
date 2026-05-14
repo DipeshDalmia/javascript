@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click on the button to perform the event</p>
+    <button id="mybutton">click</button>
+</body>
+<script>
+    let ele=document.getElementById('mybutton')
+    ele.addEventListener('click',()=>{
+        alert("button clciked")
+    })
+    let mypara=document.getElementsByTagName('p')[0]
+    mypara.addEventListener('mouseover',()=>{
+        mypara.style.backgroundColor='yellow'
+    })
+    mypara.addEventListener('mouseout',()=>{
+        mypara.style.backgroundColor='white'
+    })
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateForm(); onreset=resetForm()">
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+</body>
+<script>
+    function validateForm(){
+        var username=document.getElementById('username').value;
+        var password=document.getElementById('password').value;
+
+        if(username==="" || password==="")
+        {
+            alert("please fill all fields");
+            return false
+        }
+        alert("Form submitted! Username is:"+username+",Password is:"+password);      
+        return true;
+    }
+    function resetForm() {
+         alert("Form has been reset!");
+      }
+</script>
+</html>
