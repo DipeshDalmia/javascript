@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "demo"> </div>
+</body>
+<script>
+      const output = document.getElementById('demo');
+      function Animal() {
+         this.name = 'Lion';
+         this.age = 3;
+         this.color = 'Brown';
+      }
+      const newAnimal = new Animal();
+      output.innerHTML = "Animal Name: " + newAnimal.name + "<br>";
+      output.innerHTML += "Animal Age: " + newAnimal.age + "<br>";
+      output.innerHTML += "Animal Color: " + newAnimal.color; 
+   </script>
+</html>
