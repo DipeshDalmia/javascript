@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+		<button id="myButton">Click me!</button>
+	</div>
+	<div id = "output"></div>
+</body>
+<script>
+		const output = document.getElementById('output');
+		document.getElementById('container').addEventListener('click', function(event) {
+			output.innerHTML += 'Capturing phase - Container clicked' + "<br>";
+		}, true);
+
+		document.getElementById('myButton').addEventListener('click', function(event) {
+			output.innerHTML += 'Capturing phase - Button clicked' + "<br>";
+		}, true);
+</script>
+</html>

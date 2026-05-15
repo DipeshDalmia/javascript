@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		.parent {
+			width: 600px;
+			height: 200px;
+			background-color: #eee;
+			position: relative;
+			cursor: pointer;
+			}
+
+		.child {
+			width: 400px;
+			height: 100px;
+			background-color: #66c2ff;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		#message {
+			margin-top: 10px;
+			font-weight: bold;
+		}
+    
+	</style>
+</head>
+<body>
+    <h2>Nested Divs</h2>
+	<div class="parent" id="parentDiv">
+		<div class="child" id="childDiv">Click me!</div>
+	</div>
+	<div id="message"></div>
+</body>
+<script>
+    let message=document.getElementById('message')
+    document.getElementById('parentDiv').addEventListener('click',(event)=>{
+        message.innerHTML+='parent div clicked <br>'
+    })
+     document.getElementById('childDiv').addEventListener('click',(event)=>{
+        message.innerHTML+='child div clicked <br>'
+    })
+</script>
+</html>

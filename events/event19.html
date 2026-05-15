@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="triggerBtn">Trigger Event</button>
+</body>
+<script>
+    const customevent=new Event("mycustomevent")
+
+    document.getElementById('triggerBtn').addEventListener('click',()=>{
+        document.dispatchEvent(customevent)
+    })
+    document.addEventListener('mycustomevent',()=>{
+        alert('custom event triggered')
+    })
+</script>
+</html>

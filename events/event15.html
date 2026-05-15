@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button type="button">Submit</button>
+   </form>
+   <div id="message"></div>
+</body>
+<script>
+    const message=document.getElementById('myForm')
+    const myform=document.getElementById('myForm')
+    myform.addEventListener('input',(event)=>{
+        if(event.target.nodeName==='INPUT')
+    {
+        message.innerHTML += 
+			"Input changed: " + event.target.name + 
+            " - New value: " + event.target.value+'<br>';
+    }
+    })
+</script>
+</html>
